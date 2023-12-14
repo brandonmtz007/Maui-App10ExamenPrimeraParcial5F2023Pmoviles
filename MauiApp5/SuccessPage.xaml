@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp5.SuccessPage">
+    <ScrollView>
+
+        <StackLayout>
+
+            <Entry x:Name="nombreEntry" Placeholder="Nombre"/>
+
+            <Entry x:Name="direccionEntry" Placeholder="Dirección"/>
+
+            <Entry x:Name="telefonoEntry" Placeholder="Teléfono"/>
+
+            <Entry x:Name="correoEntry" Placeholder="Correo electrónico"/>
+
+            <Entry x:Name="urlEntry" Placeholder="URL"/>
+
+
+
+            <Button x:Name="GuardarButton" Text="Guardar" Clicked="Guardar_Clicked"/>
+
+            <Button  Text="Buscar" Clicked="Buscar_Clicked"/>
+
+            <Button Text="Eliminar" Clicked="Eliminar_Clicked"/>
+
+            <Button x:Name="ModificarButton" Text="Modificar" Clicked="Modificar_Clicked" IsEnabled="False"/>
+
+            <ListView x:Name="contactListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                <Label Text="{Binding Nombre}" />
+                                <Label Text="{Binding Direccion}" />
+                                <Label Text="{Binding Telefono}" />
+                                <Label Text="{Binding CorreoElectronico}" />
+                                <Image Source="{Binding Url}" HeightRequest="80"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+    </ScrollView>
+
+</ContentPage>

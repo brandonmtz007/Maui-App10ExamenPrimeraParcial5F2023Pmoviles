@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp5.MenuPage"
+             Title="MenuPage">
+    <ScrollView>
+        <StackLayout>
+            <Image x:Name="ImagenMostrada" HeightRequest="200" WidthRequest="200" Aspect="AspectFit" />
+            <Label x:Name="MiLabel" Text="" HorizontalOptions="Center" />
+            <Button Text="Ir Al Catalogo De Clientes" Clicked="OnButtonClickedClientes" />
+            <Button Text="Ir Al Catalogo De Productos" Clicked="OnButtonClickedProductos" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
